@@ -89,6 +89,7 @@ class CompanyDetails extends Component {
       },
     },
     formIsValid: false,
+    companylogo: "",
   };
 
   checkValidity(value, rules) {
@@ -125,6 +126,7 @@ class CompanyDetails extends Component {
   }
 
   inputChangedHandler = (event, inputIdentifier) => {
+    let logo = "";
     const updatedOrderForm = {
       ...this.state.orderForm,
     };
@@ -139,6 +141,8 @@ class CompanyDetails extends Component {
         const reader = new FileReader();
         reader.onload = (event) => {
           updatedFormElement.value = event.target.result;
+          logo = event.target.result;
+          console.log(logo);
         };
         reader.readAsDataURL(file);
       }
@@ -154,10 +158,13 @@ class CompanyDetails extends Component {
     for (let inputIdentifier in updatedOrderForm) {
       formIsValid = updatedOrderForm[inputIdentifier].valid && formIsValid;
     }
-    this.setState({ orderForm: updatedOrderForm, formIsValid: formIsValid });
+    this.setState({
+      orderForm: updatedOrderForm,
+      formIsValid: formIsValid,
+      companylogo: logo,
+    });
+    this.forceUpdate();
   };
-  handleImgupload = (e) => {};
-
   orderHandler = (event) => {
     event.preventDefault();
 
@@ -186,6 +193,7 @@ class CompanyDetails extends Component {
     }
   }
   render() {
+    let form = "";
     const formElementsArray = [];
     for (let key in this.state.orderForm) {
       formElementsArray.push({
@@ -193,7 +201,7 @@ class CompanyDetails extends Component {
         config: this.state.orderForm[key],
       });
     }
-    let form = (
+    form = (
       <form onSubmit={this.orderHandler}>
         {formElementsArray.map((formElement) => (
           <div key={formElement.id} className={classes.input_container}>
