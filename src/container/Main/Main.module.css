@@ -1,0 +1,5 @@
+.main {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(12rem, 1fr));
+  grid-template-rows: 5rem 1fr;
+}

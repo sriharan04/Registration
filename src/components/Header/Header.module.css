@@ -1,0 +1,47 @@
+.main_head {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: minmax(0rem, 3rem) repeat(3, minmax(12rem, 1fr)) minmax(
+      0rem,
+      10rem
+    );
+  grid-template-rows: auto;
+  background-color: darkslateblue;
+}
+.main_head_ul {
+  grid-column: 2/-2;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(3rem, 1fr));
+  color: black;
+  list-style: none;
+}
+.main_head_ul li {
+  display: grid;
+  grid-template-columns: minmax(2rem, 3rem) 1fr;
+  justify-self: center;
+  align-self: center;
+}
+.round {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 1rem;
+  background-color: #2e246c;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  padding-top: 0.3rem;
+}
+p {
+  margin-top: 0.3rem;
+  text-decoration: none;
+}
+.active {
+  background-color: orange !important;
+}
+.round:active {
+  background-color: orange !important;
+}
+.nav {
+  color: white;
+}

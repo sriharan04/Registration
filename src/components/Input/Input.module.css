@@ -1,0 +1,68 @@
+.Input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.Label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #483d8b;
+}
+
+.InputElement {
+  outline: none;
+  border: 1px solid #ccc;
+  background-color: white;
+  font: inherit;
+  padding: 6px 10px;
+  display: block;
+  width: 100%;
+  height: 3rem;
+  box-sizing: border-box;
+  border-radius: 0.2rem;
+}
+
+.InputElement:focus {
+  outline: none;
+  border: 1px solid orange;
+  background-color: white;
+}
+
+.Invalid {
+  border: 1px solid red;
+}
+.form-control {
+  background-color: rgb(253, 214, 214) !important;
+  color: rgb(104, 7, 60);
+  height: 3rem !important;
+  width: 90% !important;
+}
+.phone {
+  width: 90%;
+  height: 3rem;
+}
+.check {
+  width: 100%;
+  padding: 0.6rem;
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+}
+.checkbox {
+  height: 1.5rem;
+  width: 1.5rem;
+  align-self: center;
+  justify-self: center;
+}
+
+.terms {
+  color: gray;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.terms a {
+  color: orange;
+  font-size: 1.1rem;
+  font-weight: 700;
+}

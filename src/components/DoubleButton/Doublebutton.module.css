@@ -1,0 +1,16 @@
+.btn_container_cmpny {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+}
+
+.back {
+  color: black;
+  background-color: lightgray;
+  font-weight: 900;
+  font-size: 1rem;
+  align-self: center;
+  height: 3rem;
+  border: transparent;
+  margin-left: 2rem;
+}
